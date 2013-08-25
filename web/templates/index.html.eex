@@ -5,11 +5,18 @@
   <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
-  <h3>Welcome to Dynamo!</h3>
-  <ol>
-    <li>Change this template at <code>web/templates/index.html.eex</code></li>
-    <li>Add new routes at <code>web/routers/application_router.ex</code></li>
-    <li>Deploy to production with <code>MIX_ENV=prod mix do compile, server</code></li>
-  </ol>
+  <h3>Add your directory information</h3>
+  <form action="/data" method="post">
+    <label for="firstname">First name: </label>
+    <input name="firstname" type="text" id="firstname"><br>
+
+    <label for="firstname2">First name(2): </label>
+    <input name="firstname" type="text" id="firstname2"><br>
+
+    <label for="lastname">Last name: </label>
+    <input name="lastname" type="text" id="lastname"><br>
+
+    <input type="submit" value="Submit"> 
+  </form>
 </body>
 </html>
