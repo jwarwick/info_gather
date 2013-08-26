@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      <%= content_for(:title) || "School Directory" %>
+    </title>
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+  </head>
+  <body>
+    <%= content_for(:template) %>
+  </body>
+</html>
+
