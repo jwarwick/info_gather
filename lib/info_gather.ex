@@ -6,6 +6,7 @@ defmodule InfoGather do
   application and its Dynamos.
   """
   def start(_type, _args) do
-    InfoGather.Dynamo.start_link([max_restarts: 5, max_seconds: 5])
+    InfoGather.Supervisor.start_link([max_restarts: 5, max_seconds: 5])
+    # InfoGather.Dynamo.start_link([max_restarts: 5, max_seconds: 5])
   end
 end
