@@ -2,13 +2,43 @@
   Enter Information - School Directory
 <% end %>
 
-<h3>Add your directory information</h3>
-<form action="/data" method="post">
-  <label for="firstname">First name: </label>
-  <input name="firstname" type="text" id="firstname"><br>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Add your information!</h1>
+    Enter your information to be included in the student directory. All fields are optional.
+  </div>
+</div>
 
-  <label for="lastname">Last name: </label>
-  <input name="lastname" type="text" id="lastname"><br>
+<div class="container">
 
-  <input type="submit" value="Submit"> 
-</form>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Student Information</h3>
+    </div>
+
+    <div class="panel-body">
+      <form class="form-horizontal" role="form" action="/data" method="post">
+        <div class="form-group">
+          <label for="firstname" class="col-md-2 control-label">First name: </label>
+          <div class="col-md-10">
+            <input name="firstname" type="text" id="firstname" class="form-control" placeholder="First Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastname" class="col-md-2 control-label">Last name: </label>
+          <div class="col-md-10">
+            <input name="lastname" type="text" id="lastname" class="form-control" placeholder="Last Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
