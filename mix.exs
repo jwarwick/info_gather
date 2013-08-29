@@ -5,7 +5,7 @@ defmodule InfoGather.Mixfile do
     [ app: :info_gather,
       version: "0.0.1",
       dynamos: [InfoGather.Dynamo],
-      compilers: [:elixir, :dynamo, :app],
+      compilers: [:elixir, :dynamo, :app, :coffeeScript],
       env: [prod: [compile_path: "ebin"]],
       compile_path: "tmp/#{Mix.env}/info_gather/ebin",
       deps: deps ]
