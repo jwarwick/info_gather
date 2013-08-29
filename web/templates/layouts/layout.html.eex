@@ -31,5 +31,6 @@
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <%= content_for(:scripts) %>
   </body>
 </html>
