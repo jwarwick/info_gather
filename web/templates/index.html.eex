@@ -12,17 +12,30 @@
   <div class="student-element well">
     <div class="form-group">
       <label for="firstname-{{count}}" class="col-md-2 control-label">First name: </label>
-      <div class="col-md-10">
+      <div class="col-md-8">
         <input name="firstname-{{count}}" type="text" id="firstname-{{count}}" class="form-control" placeholder="First Name">
       </div>
+      <button class="btn btn-danger remove-student-button">Remove</button>
     </div>
 
     <div class="form-group">
       <label for="lastname-{{count}}" class="col-md-2 control-label">Last name: </label>
-      <div class="col-md-10">
+      <div class="col-md-8">
         <input name="lastname-{{count}}" type="text" id="lastname-{{count}}" class="form-control" placeholder="Last Name">
       </div>
     </div>
+
+    <div class="form-group">
+      <label for="bus-{{count}}" class="col-md-2 control-label">Bus: </label>
+      <div class="col-md-8">
+        <select name="bus-{{count}}" id="bus-{{count}}" class="form-control">
+          <option value="none">None</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+
   </div>
 </script>
 

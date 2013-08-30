@@ -15,3 +15,7 @@ jQuery ->
   $("#add-student-button").click ->
     add_student_div()
 
+  $(document).on 'click', ".remove-student-button", (event) ->
+    event.preventDefault()
+    $(this).closest(".student-element").remove()
+
