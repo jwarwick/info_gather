@@ -14,9 +14,9 @@ defmodule ApplicationRouter do
   # forward "/posts", to: PostsRouter
 
   get "/" do
-    conn = conn.assign(:grades, InfoGather.GradeEntity.get_grades)
-    conn = conn.assign(:teachers, InfoGather.TeacherEntity.get_teachers)
-    conn = conn.assign(:buses, InfoGather.BusEntity.get_buses)
+    conn = conn.assign(:grades, InfoGather.GradeModel.get_grades)
+    conn = conn.assign(:teachers, InfoGather.TeacherModel.get_teachers)
+    conn = conn.assign(:buses, InfoGather.BusModel.get_buses)
     render conn, "index.html"
   end
 
@@ -25,7 +25,7 @@ defmodule ApplicationRouter do
   end
 
   post "/data" do
-    record = InfoGather.DataEntity.new(entry: URI.encode_query(conn.params))
+    record = InfoGather.DataModel.new(entry: URI.encode_query(conn.params))
     InfoGather.Repo.create record
 
     redirect conn, to: "/thanks"

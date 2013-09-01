@@ -5,15 +5,15 @@ defmodule InfoGather.Repo do
   def url, do: "ecto://jwarwick@localhost/infogather"
 end
 
-defmodule InfoGather.DataEntity do
-  use Ecto.Entity
+defmodule InfoGather.DataModel do
+  use Ecto.Model
 
-  dataset :data do
+  queryable "data" do
     field :entry, :string    
   end
 end
 
-defmodule InfoGather.GradeEntity do
+defmodule InfoGather.GradeModel do
 
   def get_grades() do
     [{0, "Pre-school"}, {1, "Kindergarten"}, {2, "First Grade"},
@@ -22,7 +22,7 @@ defmodule InfoGather.GradeEntity do
   end
 end
 
-defmodule InfoGather.TeacherEntity do
+defmodule InfoGather.TeacherModel do
 
   def get_teachers() do
     %b{[["Pre A", "Pre B", "Pre C"],
@@ -32,7 +32,7 @@ defmodule InfoGather.TeacherEntity do
   end
 end
 
-defmodule InfoGather.BusEntity do
+defmodule InfoGather.BusModel do
 
   def get_buses() do
     [{0, "None"}, {1, "Bus 1"}, {2, "Bus 2"}, {3, "Bus 3"}]
