@@ -35,7 +35,7 @@ jQuery ->
     add_student_div()
     $('html, body').animate({
       scrollTop: $("#student-list .student-element:last").offset().top
-    }, 2000)
+    }, 1000)
 
   $(document).on 'click', ".remove-student-button", (event) ->
     event.preventDefault()
@@ -71,7 +71,7 @@ jQuery ->
     add_parent_div()
     $('html, body').animate({
       scrollTop: $("#parent-list .parent-element:last").offset().top
-    }, 2000)
+    }, 1000)
 
   $(document).on 'click', ".remove-parent-button", (event) ->
     event.preventDefault()
