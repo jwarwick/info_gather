@@ -14,6 +14,9 @@ defmodule ApplicationRouter do
   # forward "/posts", to: PostsRouter
 
   get "/" do
+    conn = conn.assign(:grades, InfoGather.GradeEntity.get_grades)
+    conn = conn.assign(:teachers, InfoGather.TeacherEntity.get_teachers)
+    conn = conn.assign(:buses, InfoGather.BusEntity.get_buses)
     render conn, "index.html"
   end
 

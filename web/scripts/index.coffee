@@ -1,8 +1,15 @@
 jQuery ->
-  # generate the student input
   student_source = $("#student-template").html()
   student_template = Handlebars.compile(student_source)
   student_count = 1
+
+  $(document).on 'change', ".grade-select", (event) ->
+    idx = $(this).val()
+    arr = $("#teacher-data").data("teachers")
+    teacher_select = $(this).closest(".student-element").find(".teacher-select")
+    $(teacher_select).empty()
+    for name, i in arr[idx]
+      $(teacher_select).append("<option value=\"#{i}\">#{name}</option>")
 
   update_student_remove_buttons = ->
     if $(".student-element").length > 1
@@ -16,6 +23,7 @@ jQuery ->
     student_html = student_template(student_context)
     $("#student-list" ).append(student_html)
     update_student_remove_buttons()
+    $("#student-list").children().last().find(".grade-select").change()
 
   add_student_div()
 
