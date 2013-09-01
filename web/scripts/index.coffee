@@ -33,6 +33,9 @@ jQuery ->
 
   $("#add-student-button").click ->
     add_student_div()
+    $('html, body').animate({
+      scrollTop: $("#student-list .student-element:last").offset().top
+    }, 2000)
 
   $(document).on 'click', ".remove-student-button", (event) ->
     event.preventDefault()
@@ -46,6 +49,12 @@ jQuery ->
       $(".remove-parent-button").removeAttr("disabled")
     else
       $(".remove-parent-button").attr("disabled", "disabled")
+
+  update_parent_same_address_buttons = ->
+    checkbox = $("#parent-list .parent-element:first .parent-same-address-checkbox")
+    if $(checkbox).prop("checked")
+      $(checkbox).click()
+    $(checkbox).prop("disabled", true)
     
   add_parent_div = ->
     parent_context = {count: parent_count}
@@ -54,14 +63,23 @@ jQuery ->
     $("#parent-list" ).append(parent_html)
     update_parent_remove_buttons()
     $("#parent-list").children().last().find(".grade-select").change()
+    update_parent_same_address_buttons()
 
   add_parent_div()
 
   $("#add-parent-button").click ->
     add_parent_div()
+    $('html, body').animate({
+      scrollTop: $("#parent-list .parent-element:last").offset().top
+    }, 2000)
 
   $(document).on 'click', ".remove-parent-button", (event) ->
     event.preventDefault()
     $(this).closest(".parent-element").remove()
     update_parent_remove_buttons()
+    update_parent_same_address_buttons()
+
+  $(document).on 'change', ".parent-same-address-checkbox", (event) ->
+    address_inputs = $(this).closest(".form-group").siblings(".parent-address").find(":input")
+    $(address_inputs).prop("disabled", this.checked)
 
