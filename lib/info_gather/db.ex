@@ -1,8 +1,22 @@
 defmodule InfoGather.Repo do
   use Ecto.Repo, adapter: Ecto.Adapters.Postgres
 
-  # def url, do: "ecto://dbuser:TooManySecrets@localhost/infogather"
-  def url, do: "ecto://jwarwick@localhost/infogather"
+  def url do
+    do_url(System.get_env("DATABASE_URL"))
+  end
+
+  defp do_url(nil) do
+    user = case System.get_env("USER") do
+      nil -> "postgres"
+      x -> x
+    end
+    "ecto://#{user}@localhost/infogather"
+  end
+
+  # Sample DATABASE_URL from Heroku
+  # postgres://user3123:passkja83kd8@ec2-117-21-174-214.compute-1.amazonaws.com:6212/db982398
+  defp do_url(x), do: String.replace(x, %r{^postgres}, "ecto")
+
 end
 
 defmodule InfoGather.DataModel do
