@@ -13,22 +13,13 @@ defmodule InfoGather.DataModel do
   end
 end
 
-defmodule InfoGather.GradeModel do
+defmodule InfoGather.ClassroomModel do
 
-  def get_grades() do
-    [{0, "Pre-school"}, {1, "Kindergarten"}, {2, "First Grade"},
-     {3, "Second Grade"}, {4, "Third Grade"}, {5, "Fourth Grade"},
-     {6, "Fifth Grade"}, {7, "Sixth Grade"}]
-  end
-end
-
-defmodule InfoGather.TeacherModel do
-
-  def get_teachers() do
-    %b{[["Pre A", "Pre B", "Pre C"],
-     ["K A", "K B"],
-     ["First A"],
-     ["Second A", "Second B", "Second C", "Second D"]]}
+  def get_classrooms() do
+    [{0, "Pre-school, Teacher A"}, {1, "Pre-school, Teacher B"}, 
+     {2, "Kindergarten"}, {3, "First Grade"},
+     {4, "Second Grade"}, {5, "Third Grade"}, {6, "Fourth Grade"},
+     {7, "Fifth Grade"}, {8, "Sixth Grade"}]
   end
 end
 

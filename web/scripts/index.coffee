@@ -7,19 +7,11 @@ jQuery ->
   parent_template = Handlebars.compile(parent_source)
   parent_count = 1
 
-  $(document).on 'change', ".grade-select", (event) ->
-    idx = $(this).val()
-    arr = $("#teacher-data").data("teachers")
-    teacher_select = $(this).closest(".student-element").find(".teacher-select")
-    $(teacher_select).empty()
-    for name, i in arr[idx]
-      $(teacher_select).append("<option value=\"#{i}\">#{name}</option>")
-
   update_student_remove_buttons = ->
     if $(".student-element").length > 1
-      $(".remove-student-button").removeAttr("disabled")
+      $(".remove-student-button").prop("disabled", false)
     else
-      $(".remove-student-button").attr("disabled", "disabled")
+      $(".remove-student-button").prop("disabled", true)
     
   add_student_div = ->
     student_context = {count: student_count}
@@ -27,7 +19,6 @@ jQuery ->
     student_html = student_template(student_context)
     $("#student-list" ).append(student_html)
     update_student_remove_buttons()
-    $("#student-list").children().last().find(".grade-select").change()
 
   add_student_div()
 
@@ -46,9 +37,9 @@ jQuery ->
 
   update_parent_remove_buttons = ->
     if $(".parent-element").length > 1
-      $(".remove-parent-button").removeAttr("disabled")
+      $(".remove-parent-button").prop("disabled", false)
     else
-      $(".remove-parent-button").attr("disabled", "disabled")
+      $(".remove-parent-button").prop("disabled", true)
 
   update_parent_same_address_buttons = ->
     checkbox = $("#parent-list .parent-element:first .parent-same-address-checkbox")
