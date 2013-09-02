@@ -2,6 +2,10 @@
   Enter Information - School Directory
 <% end %>
 
+<% content_for :head do %>
+  <link rel="stylesheet" href="static/css/index.css">
+<% end %>
+
 <% content_for :scripts do %>
   <!-- handlebars -->
   <script src="/static/js/handlebars.js"></script>
@@ -150,11 +154,11 @@
 
   <form class="form-horizontal" role="form" action="/data" method="post">
     <div class="panel panel-primary">
-      <div class="panel-heading">
+      <div class="panel-heading panel-heading-with-button">
         <button id="add-student-button" type="button" class="btn btn-default btn-small pull-right">
           <span class="glyphicon glyphicon-plus-sign"></span> Add Student
         </button>
-        <h3 class="panel-title">Student Information</h3>
+        <h2 class="panel-title">Student Information</h2>
       </div>
 
       <div class="panel-body">
@@ -167,11 +171,11 @@
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
+      <div class="panel-heading panel-heading-with-button">
         <button id="add-parent-button" type="button" class="btn btn-default btn-small pull-right">
           <span class="glyphicon glyphicon-plus-sign"></span> Add Parent
         </button>
-        <h3 class="panel-title">Parent Information</h3>
+        <h2 class="panel-title">Parent Information</h2>
       </div>
 
       <div class="panel-body">
@@ -185,7 +189,7 @@
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Notes</h3>
+        <h2 class="panel-title">Notes</h2>
       </div>
 
       <div class="panel-body">
