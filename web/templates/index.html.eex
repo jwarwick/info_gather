@@ -74,16 +74,16 @@
     </div>
 
     <div class="form-group">
-      <label for="parent-tel-{{count}}" class="col-md-2 control-label">Telephone</label>
+      <label for="parent-tel-{{count}}" class="col-md-2 control-label">Home Phone</label>
       <div class="col-md-8">
         <input name="parent-tel-{{count}}" type="tel" id="parent-tel-{{count}}" class="form-control" placeholder="201-123-4567">
       </div>
     </div>
 
     <div class="form-group">
-      <label for="parent-alt-tel-{{count}}" class="col-md-2 control-label">Alternate Telephone</label>
+      <label for="parent-mobile-{{count}}" class="col-md-2 control-label">Mobile Phone</label>
       <div class="col-md-8">
-        <input name="parent-alt-tel-{{count}}" type="tel" id="parent-alt-tel-{{count}}" class="form-control" placeholder="201-123-5678 x123">
+        <input name="parent-mobile-{{count}}" type="tel" id="parent-mobile-{{count}}" class="form-control" placeholder="201-123-5678">
       </div>
     </div>
 
