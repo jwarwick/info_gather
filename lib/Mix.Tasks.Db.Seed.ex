@@ -1,6 +1,5 @@
 defmodule Mix.Tasks.Db.Seed do
   use Mix.Task
-  alias Ecto.Adapters.Postgres
 
   require InfoGather.Repo
   import Ecto.Query

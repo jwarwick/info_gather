@@ -1,6 +1,8 @@
 defmodule ApplicationRouter do
   use Dynamo.Router
 
+  import Ecto.Query
+
   prepare do
     # Pick which parts of the request you want to fetch
     # You can comment the line below if you don't need
@@ -14,8 +16,14 @@ defmodule ApplicationRouter do
   # forward "/posts", to: PostsRouter
 
   get "/" do
-    conn = conn.assign(:classrooms, InfoGather.ClassroomModel.get_classrooms)
-    conn = conn.assign(:buses, InfoGather.BusModel.get_buses)
+    query = from(c in InfoGather.ClassroomModel, order_by: c.grade_level, select: {c.id, c.name})
+    classrooms = InfoGather.Repo.all(query)
+    conn = conn.assign(:classrooms, classrooms)
+
+    query = from(b in InfoGather.BusModel, order_by: b.name, select: {b.id, b.name})
+    buses = InfoGather.Repo.all(query)
+    conn = conn.assign(:buses, buses)
+
     render conn, "index.html"
   end
 

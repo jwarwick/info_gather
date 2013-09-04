@@ -34,13 +34,6 @@ defmodule InfoGather.ClassroomModel do
     field :grade_level, :integer
     field :name, :string
   end
-
-  def get_classrooms() do
-    [{0, "Pre-school, Teacher A"}, {1, "Pre-school, Teacher B"}, 
-     {2, "Kindergarten"}, {3, "First Grade"},
-     {4, "Second Grade"}, {5, "Third Grade"}, {6, "Fourth Grade"},
-     {7, "Fifth Grade"}, {8, "Sixth Grade"}]
-  end
 end
 
 defmodule InfoGather.BusModel do
@@ -48,10 +41,6 @@ defmodule InfoGather.BusModel do
 
   queryable "bus" do
     field :name, :string
-  end
-
-  def get_buses() do
-    [{0, "None"}, {1, "Bus 1"}, {2, "Bus 2"}, {3, "Bus 3"}]
   end
 end
 
