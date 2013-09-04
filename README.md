@@ -6,7 +6,7 @@ to interface with Postgres.
 To setup:
 * `mix deps.get`
 * `mix db.create`
-* Seed the `classroom` and `bus` tables with data
+* `mix db.seed`
 * `mix server` to start the webserver
 
 ## Postgres Setup
