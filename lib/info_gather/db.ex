@@ -28,6 +28,12 @@ defmodule InfoGather.DataModel do
 end
 
 defmodule InfoGather.ClassroomModel do
+  use Ecto.Model
+
+  queryable "classroom" do
+    field :grade_level, :integer
+    field :name, :string
+  end
 
   def get_classrooms() do
     [{0, "Pre-school, Teacher A"}, {1, "Pre-school, Teacher B"}, 
@@ -38,6 +44,11 @@ defmodule InfoGather.ClassroomModel do
 end
 
 defmodule InfoGather.BusModel do
+  use Ecto.Model
+
+  queryable "bus" do
+    field :name, :string
+  end
 
   def get_buses() do
     [{0, "None"}, {1, "Bus 1"}, {2, "Bus 2"}, {3, "Bus 3"}]
