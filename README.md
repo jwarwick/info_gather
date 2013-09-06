@@ -22,4 +22,22 @@ use or have a local postgres install with the current user having privleges on t
 
 There is a mix helper defined to create the required tables. Run `mix db.create`.
 
+## Postgres Commands
+Some postgres commands that are useful
+  * `psql <dbname>` to connect to the database
+  * `\dt` list tables
+  * `\q` to close the connection
+
+Useful sql
+```
+
+  SELECT * FROM BUS;
+  INSERT INTO bus (name) VALUES ('A New bus');
+  INSERT INTO classroom (grade_level, name) VALUES (1, 'First Grade, Teacher C');
+  DELETE FROM data; -- deletes all rows from table
+  DELETE FROM bus WHERE id = 22; -- delete an individual row
+
+ ```
+
+
 
