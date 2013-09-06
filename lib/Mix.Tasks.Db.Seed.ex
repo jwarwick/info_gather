@@ -26,7 +26,7 @@ defmodule Mix.Tasks.Db.Seed do
       InfoGather.Repo.create record
     end
 
-    buses = [{"Bus A"}, {"Bus B"}, {"Bus C"}]
+    buses = [{"None"}, {"Bus A"}, {"Bus B"}, {"Bus C"}]
     Enum.each buses, fn({name}) ->
       record = InfoGather.BusModel.new(name: name)
       InfoGather.Repo.create record
