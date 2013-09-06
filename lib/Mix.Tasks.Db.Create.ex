@@ -12,12 +12,16 @@ defmodule Mix.Tasks.Db.Create do
   def run(args) do
     Mix.shell.info "Creating database tables..."
     Mix.Task.run "app.start", args
-    tables = 
-      ["CREATE TABLE IF NOT EXISTS data (id serial PRIMARY KEY, entry text)",
+    queries = 
+      [
+       "DROP TABLE data",
+       "DROP TABLE classroom",
+       "DROP TABLE bus",
+       "CREATE TABLE IF NOT EXISTS data (id serial PRIMARY KEY, entry text, created timestamp)",
        "CREATE TABLE IF NOT EXISTS classroom (id serial PRIMARY KEY, grade_level integer NOT NULL, name text)",
        "CREATE TABLE IF NOT EXISTS bus (id serial PRIMARY KEY, name text)"
       ]
-    Enum.each tables, fn(sql) ->
+    Enum.each queries, fn(sql) ->
       Mix.shell.info "Executing: #{sql}"
       result = Postgres.query(InfoGather.Repo, sql)
       IO.inspect result

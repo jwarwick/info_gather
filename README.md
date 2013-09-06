@@ -36,6 +36,7 @@ Useful sql
   INSERT INTO classroom (grade_level, name) VALUES (1, 'First Grade, Teacher C');
   DELETE FROM data; -- deletes all rows from table
   DELETE FROM bus WHERE id = 22; -- delete an individual row
+  DROP TABLE bus; -- delete the table
 
  ```
 

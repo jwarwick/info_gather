@@ -32,7 +32,9 @@ defmodule ApplicationRouter do
   end
 
   post "/data" do
-    record = InfoGather.DataModel.new(entry: URI.encode_query(conn.params))
+    {{y, mon, d}, {h, min, s}} = :calendar.local_time
+    datetime = Ecto.DateTime[year: y, month: mon, day: d, hour: h, min: min, sec: s]
+    record = InfoGather.DataModel.new(entry: URI.encode_query(conn.params), created: datetime)
     InfoGather.Repo.create record
 
     redirect conn, to: "/thanks"

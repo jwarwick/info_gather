@@ -24,6 +24,7 @@ defmodule InfoGather.DataModel do
 
   queryable "data" do
     field :entry, :string    
+    field :created, :datetime
   end
 end
 
