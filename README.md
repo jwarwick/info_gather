@@ -34,6 +34,7 @@ Useful sql
   SELECT * FROM BUS;
   INSERT INTO bus (name) VALUES ('A New bus');
   INSERT INTO classroom (grade_level, name) VALUES (1, 'First Grade, Teacher C');
+  UPDATE bus SET name = '--None--' WHERE id = 1;
   DELETE FROM data; -- deletes all rows from table
   DELETE FROM bus WHERE id = 22; -- delete an individual row
   DROP TABLE bus; -- delete the table
