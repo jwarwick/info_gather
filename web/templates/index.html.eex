@@ -43,6 +43,7 @@
       <label for="bus-{{count}}" class="col-md-2 control-label">Bus</label>
       <div class="col-md-8">
         <select name="bus-{{count}}" id="bus-{{count}}" class="bus-select form-control">
+          <option value="">None</option>
           <%= lc {val, name} inlist @buses do %>
             <option value="<%= val %>"><%= name %></option>
           <% end %>
