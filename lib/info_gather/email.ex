@@ -9,8 +9,8 @@ defmodule InfoGather.Email do
       from = "ses.directory@gmail.com"
 
       :gen_smtp_client.send({to, [from],
-        "Subject: new registration\r\nFrom: SES Directory \r\nTo: SES Maintainer \r\n\r\nA user has submitted information."},
-          [{:relay, "smtp.sendgrid.net"}, {:username, username}, {:password, password}])
+        "Subject: new registration\r\nFrom: SES Directory <#{from}> \r\nTo: SES Maintainer <#{to}> \r\n\r\nA user has submitted information."},
+          [{:relay, "smtp.sendgrid.net"}, {:port, 587}, {:username, username}, {:password, password}])
     end
   end
 
