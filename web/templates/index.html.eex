@@ -148,6 +148,10 @@
   <div class="container">
     <h1>Add your information!</h1>
     Enter your information to be included in the student directory. All fields are optional.
+    <%= if @support_email do %>
+      <br>Questions or comments? Email <a href='mailto:<%= @support_email %>?Subject=Support'>
+        <%= @support_email %></a>
+    <% end %>
   </div>
 </div>
 

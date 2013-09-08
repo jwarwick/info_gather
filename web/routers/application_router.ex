@@ -24,6 +24,8 @@ defmodule ApplicationRouter do
     buses = InfoGather.Repo.all(query)
     conn = conn.assign(:buses, buses)
 
+    conn = conn.assign(:support_email, System.get_env("SUPPORT_EMAIL"))
+
     render conn, "index.html"
   end
 
