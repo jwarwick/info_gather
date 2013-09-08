@@ -4,6 +4,7 @@
   "ecto": {:git, "git://github.com/elixir-lang/ecto.git", "0af90b7e2f65eb4a8079b6bc0fc380f2d755944d", []},
   "ex_doc": {:git, "https://github.com/elixir-lang/ex_doc.git", "4bc1e9af619fd98e51479cbe09157ff831b0d4e1", []},
   "exjson": {:git, "git://github.com/guedes/exjson.git", "9b90d3a328c5ae7421b992386c5d9cadf44609ac", []},
+  "gen_smtp": {:git, "git://github.com/Vagabond/gen_smtp.git", "2d75ba1ae5484443c1aae38aec6343f9b6e24870", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "6f9b403602371bc3d4aa0b67b1e253b105075bcf", []},
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", []},
   "pgsql": {:git, "git://github.com/semiocast/pgsql.git", "2df33a2925e097aecf28eaefc5bb4c686f347c0e", []},

@@ -23,7 +23,8 @@ defmodule InfoGather.Mixfile do
       { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },
       { :ecto, github: "elixir-lang/ecto" },
       { :pgsql, github: "semiocast/pgsql" },
-      { :exjson, github: "guedes/exjson" }
+      { :exjson, github: "guedes/exjson" },
+      { :gen_smtp, github: "Vagabond/gen_smtp" }
     ]
   end
 end

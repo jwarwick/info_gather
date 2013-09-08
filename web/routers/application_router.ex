@@ -37,6 +37,8 @@ defmodule ApplicationRouter do
     record = InfoGather.DataModel.new(entry: URI.encode_query(conn.params), created: datetime)
     InfoGather.Repo.create record
 
+    InfoGather.Email.send_notify_email()
+
     redirect conn, to: "/thanks"
   end
 
