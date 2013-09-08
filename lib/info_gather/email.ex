@@ -7,7 +7,7 @@ defmodule InfoGather.Email do
     from = System.get_env("NOTIFY_EMAIL_FROM")
 
     if username && password && to && from do
-      :gen_smtp_client.send({to, [from],
+      :gen_smtp_client.send({from, [to],
         "Subject: new registration\r\nFrom: Directory Server <#{from}> \r\nTo: Directory Maintainer <#{to}> \r\n\r\nA user has submitted information."},
           [{:relay, "smtp.sendgrid.net"}, {:port, 587}, {:username, username}, {:password, password}])
     end
