@@ -43,6 +43,7 @@ Useful sql
 ## Environment Variables
 Define the following environment variables to enable certain features
   * `SENDGRID_USERNAME` and `SENDGRID_PASSWORD`: to send email using the Heroku SendGrid Addon
+  * `NOTIFY_EMAIL_TO` and `NOTIFY_EMAIL_FROM`: also need to be defined to use the SendGrid Addon
   * `SUPPORT_EMAIL`: if defined, adds a line of help text with a `mailto` link in to the top of the page
 
 
