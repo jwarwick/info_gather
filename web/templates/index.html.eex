@@ -75,9 +75,9 @@
     </div>
 
     <div class="form-group">
-      <label for="parent-tel-{{count}}" class="col-md-2 control-label">Home Phone</label>
+      <label for="parent-email-{{count}}" class="col-md-2 control-label">Email</label>
       <div class="col-md-8">
-        <input name="parent-tel-{{count}}" type="tel" id="parent-tel-{{count}}" class="form-control" placeholder="201-123-4567">
+        <input name="parent-email-{{count}}" type="email" id="parent-email-{{count}}" class="form-control" placeholder="fiona@busytown.net">
       </div>
     </div>
 
@@ -89,17 +89,17 @@
     </div>
 
     <div class="form-group">
-      <label for="parent-email-{{count}}" class="col-md-2 control-label">Email</label>
-      <div class="col-md-8">
-        <input name="parent-email-{{count}}" type="email" id="parent-email-{{count}}" class="form-control" placeholder="fiona@busytown.net">
-      </div>
-    </div>
-
-    <div class="form-group">
       <label for="parent-same-address-{{count}}" class="col-md-4 control-label">
         <input type="checkbox" value="" id="parent-same-address-{{count}}" class="parent-same-address-checkbox">
         Same Address As Previous Parent
       </label>
+    </div>
+
+    <div class="form-group parent-address">
+      <label for="parent-tel-{{count}}" class="col-md-2 control-label">Home Phone</label>
+      <div class="col-md-8">
+        <input name="parent-tel-{{count}}" type="tel" id="parent-tel-{{count}}" class="form-control" placeholder="201-123-4567">
+      </div>
     </div>
 
     <div class="form-group parent-address">
