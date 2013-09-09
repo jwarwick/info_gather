@@ -90,7 +90,7 @@
 
     <div class="form-group">
       <label for="parent-same-address-{{count}}" class="col-md-4 control-label">
-        <input type="checkbox" value="" id="parent-same-address-{{count}}" class="parent-same-address-checkbox">
+        <input name="parent-same-address-{{count}}" type="checkbox" value="1" id="parent-same-address-{{count}}" class="parent-same-address-checkbox">
         Same Address As Previous Parent
       </label>
     </div>

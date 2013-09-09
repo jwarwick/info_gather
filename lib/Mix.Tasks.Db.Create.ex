@@ -17,7 +17,7 @@ defmodule Mix.Tasks.Db.Create do
        "DROP TABLE data",
        "DROP TABLE classroom",
        "DROP TABLE bus",
-       "CREATE TABLE IF NOT EXISTS data (id serial PRIMARY KEY, entry text, created timestamp)",
+       "CREATE TABLE IF NOT EXISTS data (id serial PRIMARY KEY, entry text, created timestamp, imported boolean DEFAULT FALSE)",
        "CREATE TABLE IF NOT EXISTS classroom (id serial PRIMARY KEY, grade_level integer NOT NULL, name text)",
        "CREATE TABLE IF NOT EXISTS bus (id serial PRIMARY KEY, name text)"
       ]
