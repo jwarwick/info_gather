@@ -21,8 +21,8 @@ defmodule InfoGather.Mixfile do
     [ 
       { :cowboy, github: "extend/cowboy" },
       { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },
+      { :postgrex, github: "ericmj/postgrex" },
       { :ecto, github: "elixir-lang/ecto" },
-      { :pgsql, github: "semiocast/pgsql" },
       { :exjson, github: "guedes/exjson" },
       { :gen_smtp, github: "Vagabond/gen_smtp" }
     ]
