@@ -5,4 +5,5 @@
 /keys
 erl_crash.dump
 *.dump
+_build
 
