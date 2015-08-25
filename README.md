@@ -20,6 +20,8 @@ use or have a local postgres install with the current user having privleges on t
 
 ```
 
+To connect to a Heroku database of a deployed application, use `heroku pg:psql --app <app-name>`
+
 There is a mix helper defined to create the required tables. Run `mix db.create`.
 
 ## Postgres Commands
